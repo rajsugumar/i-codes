@@ -1,0 +1,22 @@
+Linux Command.
+------------------------------------------------------------------------------------------------------
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \https://pkg.jenkins.io/redhat-stable/jenkins.reposudo rpm 
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+sudo amazon-linux-extras install java-openjdk11 -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+Ubuntu os.
+------------------------------------------------------------------------------------------------------
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install openjdk-11-jdk
+java -version
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
